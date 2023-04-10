@@ -1,7 +1,9 @@
 pipeline {
-    agent any
+    agent { label 'main' }
+    
+
     tools {
-        "maven-3.9.1"
+        maven '3.9.1'
     }
     stages {
         stage('Clean and Install') {
